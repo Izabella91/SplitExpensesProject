@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <array name="categories">
+            <item>House</item>
+            <item>Travel</item>
+            <item>Other</item>
+        </array>
+</resources>

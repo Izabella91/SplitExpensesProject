@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".EventDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/eventNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/event_name"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/eventDateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_date"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventNameTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/participantsRecyclerView"
+            android:layout_width="368dp"
+            android:layout_height="137dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventDateTextView" />
+
+        <Button
+            android:id="@+id/addParticipantsButton"
+            android:layout_width="159dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/add_participants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/participantsRecyclerView" />
+
+        <Button
+            android:id="@+id/addExpenseButton"
+            android:layout_width="161dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/add_expense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addParticipantsButton" />
+
+        <TextView
+            android:id="@+id/description_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Description"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/bg_card_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addExpenseButton" />
+
+        <TextView
+            android:id="@+id/amount_header"
+            android:layout_width="71dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="4dp"
+            android:text="Amount"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/bg_card_color"
+            app:layout_constraintStart_toEndOf="@+id/description_header"
+            app:layout_constraintTop_toBottomOf="@+id/addExpenseButton" />
+
+        <TextView
+            android:id="@+id/paid_by_header"
+            android:layout_width="98dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Paid by"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/bg_card_color"
+            app:layout_constraintStart_toEndOf="@+id/amount_header"
+            app:layout_constraintTop_toBottomOf="@+id/addExpenseButton" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expensesRecyclerView"
+            android:layout_width="374dp"
+            android:layout_height="291dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addExpenseButton" />
+
+        <Button
+            android:id="@+id/showBalancesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@android:color/transparent"
+            android:text="Show Balances"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expensesRecyclerView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
